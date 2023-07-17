@@ -15,6 +15,110 @@
   --white: hsl(0, 0%, 100%);
   --lightGrey: hsl(217, 12%, 63%);
   --mediumGrey: hsl(216, 12%, 54%);
-  --darkBlue: hsl(213, 19%, 18%);
+  --darkBlue: hsl(213, 20%, 18%);
   --veryDarkBlue: hsl(216, 12%, 8%);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--veryDarkBlue);
+}
+section .main-cont,
+section .comfirm-cont {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  min-height: 400px;
+  justify-content: space-evenly;
+  background-color: var(--darkBlue);
+  border-radius: 30px;
+  padding: 0 30px;
+}
+section .comfirm-cont {
+  display: none;
+}
+
+section .main-cont .star-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background-color: var(--mediumGrey);
+  border-radius: 50%;
+}
+
+.bld-txt {
+  font-size: 28px;
+  color: var(--white);
+}
+
+.commt {
+  color: var(--lightGrey);
+  font-size: 15px;
+  line-height: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 150px;
+}
+
+form .rat_cont {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rat_cont input {
+  display: none;
+}
+
+.rat_cont label {
+  color: var(--lightGrey);
+  width: 50px;
+  height: 50px;
+  background-color: #2d333d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.rat_cont label:hover,
+.rat_cont label:hover h1 {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.radio_input:checked + .radio_label {
+  color: var(--white);
+  background: var(--lightGrey);
+}
+
+form button {
+  background-color: var(--orange);
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: 400;
+  letter-spacing: 3px;
 }
